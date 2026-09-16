@@ -1,17 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Gilded Rose - Full Spec-Based Test Suite
-========================================
-Tests are written against the SPECIFICATION, not the current buggy code.
-Some tests will fail until the refactor in Step 3-4 is complete.
-
-Assumption: Any item whose name starts with "Conjured" is treated as a
-Conjured item (category-based matching, not exact string match), since
-the spec refers to a category of items, not a single product name.
-
-Run with: pytest test_gilded_rose.py -v
-"""
-
 import pytest
 from gilded_rose import Item, GildedRose
 
