@@ -44,7 +44,7 @@ class TestNormalItems:
     def test_quality_degrades_twice_as_fast_once_sell_by_passed(self):
         # sell_in goes negative: each day costs 2 quality
         item = make("Elixir of the Mongoose", sell_in=1, quality=10)
-        update([item], days=2)          # day1: sell_in=0,q=9 → day2: expired,q=7
+        update([item], days=2)          
         assert item.quality == 7
 
     def test_quality_never_goes_negative(self):
@@ -54,7 +54,7 @@ class TestNormalItems:
 
     def test_quality_never_goes_negative_after_expiry(self):
         item = make("+5 Dexterity Vest", sell_in=0, quality=1)
-        update([item])                  # would need -2 but floor is 0
+        update([item])                  
         assert item.quality == 0
 
     def test_quality_drops_to_zero_not_below_over_many_days(self):
